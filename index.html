@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>أدوات التدريب الطبي</title>
+    <style>
+      /* General Reset */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background: #f9f9f9;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+      .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      header {
+        background: #4CAF50;
+        color: white;
+        padding: 1rem 0;
+        text-align: center;
+      }
+
+      section {
+        margin: 1.5rem 0;
+      }
+
+      #hero img {
+        width: 100%;
+        height: auto;
+      }
+
+      #long img {
+        width: 100%;
+        height: auto;
+      }
+
+      #SalePart {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-bottom: 2rem;
+      }
+      .sale_item {
+        flex: 1 1 calc(50% - 1rem);
+        position: relative;
+        border-radius: 8px;
+        overflow: hidden;
+        text-align: center;
+        background: white;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .sale_item img {
+        border-bottom: 1px solid #ddd;
+      }
+      .sale_item .text_with_btn {
+        position: absolute;
+        bottom: 10%;
+        left: 10%;
+        color: white;
+      }
+
+      #orderForm {
+        background: white;
+        padding: 2rem;
+        margin: 2rem 0;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      #orderForm h2 {
+        margin-bottom: 1.5rem;
+        text-align: center;
+        color: #333;
+      }
+
+      .product-option {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+        border: 1px solid #ddd;
+        padding: 1rem;
+        border-radius: 8px;
+        background: white;
+      }
+
+      .product-option.best-offer {
+        border: 2px solid #4CAF50;
+        position: relative;
+      }
+
+      .best-offer-badge {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        background: #4CAF50;
+        color: white;
+        padding: 0.3rem 0.6rem;
+        border-radius: 8px;
+        font-size: 0.8rem;
+      }
+
+      .product-info {
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+        margin-right: 1rem;
+      }
+
+      .product-name {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #333;
+      }
+
+      .old-price {
+        text-decoration: line-through;
+        color: #999;
+        font-size: 0.9rem;
+      }
+
+      .new-price {
+        color: #4CAF50;
+        font-size: 1.1rem;
+        font-weight: bold;
+      }
+
+      .discount {
+        color: #f44336;
+        font-size: 0.9rem;
+        font-weight: bold;
+      }
+
+      #orderForm input,
+      #orderForm select,
+      #orderForm button {
+        width: 100%;
+        padding: 0.8rem;
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+
+      #orderForm input::placeholder {
+        color: #aaa;
+        font-size: 0.9rem;
+      }
+
+      #orderForm button {
+        background: #4CAF50;
+        color: white;
+        cursor: pointer;
+        border: none;
+        font-weight: bold;
+        transition: background 0.3s;
+      }
+
+      #orderForm button:hover {
+        background: #45a049;
+      }
+
+      footer {
+        background: #333;
+        color: white;
+        text-align: center;
+        padding: 1rem;
+        margin-top: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>أدوات التدريب الطبي</h1>
+    </header>
+
+    <main class="container">
+      <section id="hero">
+        <img src="images/stolpic.avif" alt="صورة البطل" />
+      </section>
+
+      <form id="orderForm">
+        <h2>اختر المنتج الذي تريده</h2>
+        <div class="product-option">
+          <input type="radio" id="product1" name="product" value="وسادة طبية فقط" required />
+          <label for="product1">
+            <span class="product-info">
+              <span class="product-name">اطلب الوسادة الطبية فقط</span>
+              <span class="old-price">3000 دج</span>
+              <span class="new-price">2900 دج</span>
+            </span>
+          </label>
+        </div>
+
+        <div class="product-option">
+          <input type="radio" id="product2" name="product" value="الحقيبة الطبية فقط" />
+          <label for="product2">
+            <span class="product-info">
+              <span class="product-name">اطلب الحقيبة الطبية فقط</span>
+              <span class="old-price">5000 دج</span>
+              <span class="new-price">4000 دج</span>
+            </span>
+          </label>
+        </div>
+
+        <div class="product-option best-offer">
+          <input type="radio" id="product3" name="product" value="الباقة الكاملة" />
+          <label for="product3">
+            <span class="product-info">
+              <span class="product-name">اطلب الباقة الكاملة</span>
+              <span class="discount">تخفيض 1600 دج</span>
+              <span class="old-price">8700 دج</span>
+              <span class="new-price">5300 دج</span>
+            </span>
+            <span class="best-offer-badge">أفضل عرض</span>
+          </label>
+        </div>
+
+        <h2>معلومات العميل</h2>
+        <input type="text" name="name" placeholder="الاسم الكامل" required />
+        <input type="tel" name="phone" placeholder="رقم الهاتف" required />
+        <select id="wilaya" name="wilaya" onchange="updateBaladiya()" required>
+          <option value="">اختر الولاية</option>
+        </select>
+        <select id="baladiya" name="baladiya" required>
+          <option value="">اختر البلدية</option>
+        </select>
+        <input type="text" name="address" placeholder="عنوان المنزل" required />
+
+        <button type="submit">إرسال الطلب</button>
+      </form>
+      <section id="long">
+        <img src="images/s2.jpg" alt="صورة طل" />
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 أدوات التدريب الطبي. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <script src="algeria_wilaya_communes.js"></script>
+    <script>
+      const wilayaSelect = document.getElementById("wilaya");
+      const baladiyaSelect = document.getElementById("baladiya");
+
+      Object.keys(wilayaCommunes).forEach((wilaya) => {
+        const option = document.createElement("option");
+        option.value = wilaya;
+        option.textContent = wilaya;
+        wilayaSelect.appendChild(option);
+      });
+
+      function updateBaladiya() {
+        const selectedWilaya = wilayaSelect.value;
+        baladiyaSelect.innerHTML = '<option value="">اختر البلدية</option>';
+
+        if (wilayaCommunes[selectedWilaya]) {
+          wilayaCommunes[selectedWilaya].forEach((baladiya) => {
+            const option = document.createElement("option");
+            option.value = baladiya;
+            option.textContent = baladiya;
+            baladiyaSelect.appendChild(option);
+          });
+        }
+      }
+
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbxJihUD0QMUGnLzUB3YE0T00ep6Q5m4ulpyzH1MiGkL6vFtQBJqy_TU0GrMrl0ifMA-mA/exec"; // Replace with your script URL
+      const form = document.getElementById("orderForm");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const formData = new FormData(form);
+        fetch(scriptURL, { method: "POST", body: formData })
+          .then(() => alert("تم إرسال الطلب بنجاح!"))
+          .catch((error) => alert("حدث خطأ أثناء إرسال الطلب."));
+      });
+    </script>
+  </body>
+</html>
